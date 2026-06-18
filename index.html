@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>schultz.us</title>
     
-    <!-- External Font: Inter to align with Blackwald's typography -->
+    <!-- External Font: Inter to align with the premium typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -33,7 +33,7 @@
             -webkit-font-smoothing: antialiased;
         }
         
-        /* Entrance Animation echoing Blackwald */
+        /* Entrance Animation */
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(15px); }
             100% { opacity: 1; transform: translateY(0); }
@@ -47,9 +47,9 @@
 
         /* Graphic Sizing */
         .family-graphic {
-            width: 80px;
+            width: 75px;
             height: auto;
-            margin: 0 auto 2rem auto;
+            margin: 0 auto 2.5rem auto;
             display: block;
         }
 
@@ -58,14 +58,14 @@
             font-weight: 400;
             font-size: 0.75rem; 
             letter-spacing: 0.3em; 
-            margin-right: -0.3em; /* Compensates for trailing letter-spacing to perfectly center */
+            margin-right: -0.3em; 
             line-height: 1.6; 
             margin-bottom: 2rem; 
             text-transform: uppercase; 
             color: var(--text-secondary);
         }
 
-        /* Vertical Divider instead of a horizontal line */
+        /* Vertical Divider */
         .divider { 
             width: 1px; 
             height: 30px; 
@@ -95,23 +95,42 @@
 </head>
 <body>
     <div class="container">
-        <!-- Family Anchor / Compass Graphic -->
-        <svg class="family-graphic" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <!-- Central Meridian (Vertical Axis) -->
-            <line x1="50" y1="15" x2="50" y2="75" stroke="#EAEAEA" stroke-width="1.25" stroke-linecap="round" />
-            
-            <!-- Baseline (Horizon Axis) -->
-            <line x1="25" y1="75" x2="75" y2="75" stroke="#4A5158" stroke-width="1" stroke-linecap="round" />
-            
-            <!-- Compass Dial / Subsurface Arc -->
-            <path d="M 30 55 A 24 24 0 0 0 70 55" fill="none" stroke="#88929B" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
-            
-            <!-- Primary Pointer (North Indicator) -->
-            <polygon points="50,10 54,25 46,25" fill="#EAEAEA" />
-            
-            <!-- Structural Support Coordinates -->
-            <line x1="35" y1="45" x2="50" y2="60" stroke="#88929B" stroke-width="0.75" stroke-linecap="round" opacity="0.5" />
-            <line x1="65" y1="45" x2="50" y2="60" stroke="#88929B" stroke-width="0.75" stroke-linecap="round" opacity="0.5" />
+        
+        <!-- Minimalist Family Crest Line Art -->
+        <svg class="family-graphic" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+                <!-- This clip path ensures all background facets stay perfectly inside the shield -->
+                <clipPath id="shield-clip">
+                    <path d="M 20 20 L 80 20 L 80 65 C 80 95 50 115 50 115 C 50 115 20 95 20 65 Z" />
+                </clipPath>
+            </defs>
+
+            <!-- Background Elements (Clipped) -->
+            <g clip-path="url(#shield-clip)">
+                <!-- Fine Facet Lines (Nodding to the low-poly 3D texture) -->
+                <path d="M 50 20 L 20 65 M 50 20 L 80 65 M 20 65 L 50 85 L 80 65 M 50 85 L 50 115" fill="none" stroke="#88929B" stroke-width="0.5" opacity="0.2" />
+                <path d="M 20 40 L 50 55 L 80 40 M 35 20 L 50 55 M 65 20 L 50 55" fill="none" stroke="#88929B" stroke-width="0.5" opacity="0.2" />
+
+                <!-- The Diagonal Bend -->
+                <line x1="20" y1="20" x2="90" y2="90" stroke="#88929B" stroke-width="1.25" opacity="0.6" />
+                <line x1="-10" y1="30" x2="80" y2="120" stroke="#88929B" stroke-width="1.25" opacity="0.6" />
+            </g>
+
+            <!-- Main Shield Outline -->
+            <path d="M 20 20 L 80 20 L 80 65 C 80 95 50 115 50 115 C 50 115 20 95 20 65 Z" fill="none" stroke="#EAEAEA" stroke-width="1.5" stroke-linejoin="round" />
+
+            <!-- 3 Geometric Flowers (Minimalist Pentagons) -->
+            <!-- Top Left -->
+            <polygon points="35,50 39.8,53.5 37.9,59 32.1,59 30.2,53.5" fill="none" stroke="#EAEAEA" stroke-width="1" stroke-linejoin="round"/>
+            <circle cx="35" cy="55" r="1.5" fill="#EAEAEA" />
+
+            <!-- Center -->
+            <polygon points="50,65 54.8,68.5 52.9,74 47.1,74 45.2,68.5" fill="none" stroke="#EAEAEA" stroke-width="1" stroke-linejoin="round"/>
+            <circle cx="50" cy="70" r="1.5" fill="#EAEAEA" />
+
+            <!-- Bottom Right -->
+            <polygon points="65,80 69.8,83.5 67.9,89 62.1,89 60.2,83.5" fill="none" stroke="#EAEAEA" stroke-width="1" stroke-linejoin="round"/>
+            <circle cx="65" cy="85" r="1.5" fill="#EAEAEA" />
         </svg>
         
         <!-- Domains -->
