@@ -45,12 +45,12 @@
             animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
-        /* Sleek Sans-Serif Monogram */
-        h1 { 
-            font-weight: 300; 
-            font-size: 3.5rem; 
-            margin: 0 0 1rem 0; 
-            color: var(--text-primary); 
+        /* Graphic Sizing */
+        .family-graphic {
+            width: 80px;
+            height: auto;
+            margin: 0 auto 2rem auto;
+            display: block;
         }
 
         /* Wide-spaced Subheader */
@@ -73,7 +73,7 @@
             margin: 0 auto 2rem auto; 
         }
 
-        /* Clean Narrative Text (Italics removed) */
+        /* Clean Narrative Text */
         p { 
             font-weight: 300;
             font-size: 0.9rem; 
@@ -95,13 +95,29 @@
 </head>
 <body>
     <div class="container">
-        <!-- Monogram -->
-        <h1>S</h1>
+        <!-- Family Anchor / Compass Graphic -->
+        <svg class="family-graphic" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Central Meridian (Vertical Axis) -->
+            <line x1="50" y1="15" x2="50" y2="75" stroke="#EAEAEA" stroke-width="1.25" stroke-linecap="round" />
+            
+            <!-- Baseline (Horizon Axis) -->
+            <line x1="25" y1="75" x2="75" y2="75" stroke="#4A5158" stroke-width="1" stroke-linecap="round" />
+            
+            <!-- Compass Dial / Subsurface Arc -->
+            <path d="M 30 55 A 24 24 0 0 0 70 55" fill="none" stroke="#88929B" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+            
+            <!-- Primary Pointer (North Indicator) -->
+            <polygon points="50,10 54,25 46,25" fill="#EAEAEA" />
+            
+            <!-- Structural Support Coordinates -->
+            <line x1="35" y1="45" x2="50" y2="60" stroke="#88929B" stroke-width="0.75" stroke-linecap="round" opacity="0.5" />
+            <line x1="65" y1="45" x2="50" y2="60" stroke="#88929B" stroke-width="0.75" stroke-linecap="round" opacity="0.5" />
+        </svg>
         
         <!-- Domains -->
         <h2>schultz.us / schultz.nyc</h2>
         
-        <!-- Blackwald-style Vertical Divider -->
+        <!-- Vertical Divider -->
         <div class="divider"></div>
         
         <!-- Tagline -->
