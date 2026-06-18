@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>schultz.us</title>
     
-    <!-- External Font: Inter to align with the premium typography -->
+    <!-- External Font: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -45,9 +45,9 @@
             animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
-        /* Graphic Sizing */
-        .family-graphic {
-            width: 75px;
+        /* Reused Forest Graphic Sizing & Color Override */
+        .logo-graphic {
+            width: 120px;
             height: auto;
             margin: 0 auto 2.5rem auto;
             display: block;
@@ -96,41 +96,50 @@
 <body>
     <div class="container">
         
-        <!-- Minimalist Family Crest Line Art -->
-        <svg class="family-graphic" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs>
-                <!-- This clip path ensures all background facets stay perfectly inside the shield -->
-                <clipPath id="shield-clip">
-                    <path d="M 20 20 L 80 20 L 80 65 C 80 95 50 115 50 115 C 50 115 20 95 20 65 Z" />
-                </clipPath>
-            </defs>
+        <!-- Reused Blackwald Conifer Canopy Graphic (Palette Aligned) -->
+        <svg class="logo-graphic" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g transform="translate(0, 0)">
+                
+                <!-- Subsurface Roots -->
+                <path d="M 60 130 Q 55 140 48 145" fill="none" stroke="var(--text-primary)" stroke-width="0.75" stroke-linecap="round" opacity="0.2" />
+                <path d="M 60 130 Q 65 138 70 142" fill="none" stroke="var(--text-primary)" stroke-width="0.75" stroke-linecap="round" opacity="0.2" />
+                
+                <path d="M 95 130 Q 88 142 80 150" fill="none" stroke="var(--text-primary)" stroke-width="0.75" stroke-linecap="round" opacity="0.2" />
+                <path d="M 95 130 Q 102 145 110 155" fill="none" stroke="var(--text-primary)" stroke-width="0.75" stroke-linecap="round" opacity="0.2" />
+                
+                <path d="M 130 130 Q 120 145 112 155" fill="none" stroke="var(--text-primary)" stroke-width="0.75" stroke-linecap="round" opacity="0.2" />
+                <path d="M 130 130 Q 140 142 148 150" fill="none" stroke="var(--text-primary)" stroke-width="0.75" stroke-linecap="round" opacity="0.2" />
 
-            <!-- Background Elements (Clipped) -->
-            <g clip-path="url(#shield-clip)">
-                <!-- Fine Facet Lines (Nodding to the low-poly 3D texture) -->
-                <path d="M 50 20 L 20 65 M 50 20 L 80 65 M 20 65 L 50 85 L 80 65 M 50 85 L 50 115" fill="none" stroke="#88929B" stroke-width="0.5" opacity="0.2" />
-                <path d="M 20 40 L 50 55 L 80 40 M 35 20 L 50 55 M 65 20 L 50 55" fill="none" stroke="#88929B" stroke-width="0.5" opacity="0.2" />
+                <!-- Horizon Anchor -->
+                <line x1="25" y1="130" x2="175" y2="130" stroke="var(--text-secondary)" stroke-width="1.25" stroke-linecap="round" opacity="0.4" />
 
-                <!-- The Diagonal Bend -->
-                <line x1="20" y1="20" x2="90" y2="90" stroke="#88929B" stroke-width="1.25" opacity="0.6" />
-                <line x1="-10" y1="30" x2="80" y2="120" stroke="#88929B" stroke-width="1.25" opacity="0.6" />
+                <!-- Central Trunks -->
+                <line x1="60" y1="80" x2="60" y2="130" stroke="var(--text-primary)" stroke-width="1" stroke-linecap="round" />
+                <line x1="95" y1="45" x2="95" y2="130" stroke="var(--text-primary)" stroke-width="1.25" stroke-linecap="round" />
+                <line x1="130" y1="20" x2="130" y2="130" stroke="var(--text-primary)" stroke-width="1.5" stroke-linecap="round" />
+
+                <!-- 1. Small Tree -->
+                <path d="M 60 90 Q 50 100 45 110" fill="none" stroke="var(--text-primary)" stroke-width="1" stroke-linecap="round" />
+                <path d="M 60 90 Q 70 100 75 110" fill="none" stroke="var(--text-primary)" stroke-width="1" stroke-linecap="round" />
+                <path d="M 60 105 Q 48 115 40 125" fill="none" stroke="var(--text-primary)" stroke-width="1" stroke-linecap="round" />
+                <path d="M 60 105 Q 72 115 80 125" fill="none" stroke="var(--text-primary)" stroke-width="1" stroke-linecap="round" />
+
+                <!-- 2. Medium Tree -->
+                <path d="M 95 55 Q 83 70 77 85" fill="none" stroke="var(--text-primary)" stroke-width="1.25" stroke-linecap="round" />
+                <path d="M 95 55 Q 107 70 113 85" fill="none" stroke="var(--text-primary)" stroke-width="1.25" stroke-linecap="round" />
+                <path d="M 95 75 Q 78 95 70 110" fill="none" stroke="var(--text-primary)" stroke-width="1.25" stroke-linecap="round" />
+                <path d="M 95 75 Q 112 95 120 110" fill="none" stroke="var(--text-primary)" stroke-width="1.25" stroke-linecap="round" />
+                <path d="M 95 95 Q 75 115 65 125" fill="none" stroke="var(--text-primary)" stroke-width="1.25" stroke-linecap="round" />
+                <path d="M 95 95 Q 115 115 125 125" fill="none" stroke="var(--text-primary)" stroke-width="1.25" stroke-linecap="round" />
+
+                <!-- 3. Tall Tree -->
+                <path d="M 130 30 Q 115 45 108 60" fill="none" stroke="var(--text-primary)" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M 130 30 Q 145 45 152 60" fill="none" stroke="var(--text-primary)" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M 130 50 Q 110 70 100 90" fill="none" stroke="var(--text-primary)" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M 130 50 Q 150 70 160 90" fill="none" stroke="var(--text-primary)" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M 130 75 Q 105 100 92 125" fill="none" stroke="var(--text-primary)" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M 130 75 Q 155 100 168 125" fill="none" stroke="var(--text-primary)" stroke-width="1.5" stroke-linecap="round" />
             </g>
-
-            <!-- Main Shield Outline -->
-            <path d="M 20 20 L 80 20 L 80 65 C 80 95 50 115 50 115 C 50 115 20 95 20 65 Z" fill="none" stroke="#EAEAEA" stroke-width="1.5" stroke-linejoin="round" />
-
-            <!-- 3 Geometric Flowers (Minimalist Pentagons) -->
-            <!-- Top Left -->
-            <polygon points="35,50 39.8,53.5 37.9,59 32.1,59 30.2,53.5" fill="none" stroke="#EAEAEA" stroke-width="1" stroke-linejoin="round"/>
-            <circle cx="35" cy="55" r="1.5" fill="#EAEAEA" />
-
-            <!-- Center -->
-            <polygon points="50,65 54.8,68.5 52.9,74 47.1,74 45.2,68.5" fill="none" stroke="#EAEAEA" stroke-width="1" stroke-linejoin="round"/>
-            <circle cx="50" cy="70" r="1.5" fill="#EAEAEA" />
-
-            <!-- Bottom Right -->
-            <polygon points="65,80 69.8,83.5 67.9,89 62.1,89 60.2,83.5" fill="none" stroke="#EAEAEA" stroke-width="1" stroke-linejoin="round"/>
-            <circle cx="65" cy="85" r="1.5" fill="#EAEAEA" />
         </svg>
         
         <!-- Domains -->
@@ -139,8 +148,8 @@
         <!-- Vertical Divider -->
         <div class="divider"></div>
         
-        <!-- Tagline -->
-        <p>A private digital space.</p>
+        <!-- Tagline
+        <p>A private digital space.</p> -->
         
         <!-- Footer -->
         <div class="footer">EST. 2006</div>
